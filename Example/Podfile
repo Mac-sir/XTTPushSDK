@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'XTTPushSDK_Example' do
+  pod 'XTTPushSDK', :path => '../'
+
+  target 'XTTPushSDK_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
