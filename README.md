@@ -22,7 +22,7 @@ pod 'XTTPushSDK'
 
 ## Author
 
-Mac_air, 1018472834@qq.com
+Mac-sir, 1018472834@qq.com
 
 ## License
 

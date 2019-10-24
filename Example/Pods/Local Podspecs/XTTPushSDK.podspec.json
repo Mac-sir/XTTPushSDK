@@ -19,16 +19,12 @@
     "ios": "10.0"
   },
   "source_files": "XTTPushSDK/Classes/**/*",
-  "swift_versions": "4.0",
+  "swift_versions": "5.0",
   "static_framework": true,
-  "frameworks": "UIKit",
   "dependencies": {
-    "MJRefresh": [
-
-    ],
     "Firebase/Messaging": [
 
     ]
   },
-  "swift_version": "4.0"
+  "swift_version": "5.0"
 }

@@ -21,8 +21,4 @@ class ViewController: UIViewController {
     }
 
 }
-class abc: PagingVM {
-    override func loadNewData(_ ret: @escaping (() -> Void)) {
-        
-    }
-}
+

@@ -9,7 +9,7 @@ import Foundation
 import FirebaseCore
 import FirebaseMessaging
 import UserNotifications
-//在appdelegate中初始化 fcm
+//MARK: --须在appdelegate中初始化 XTPushSDKInitFcm.shared.shareInstance()
 @objc public class XTPushSDKInitFcm: NSObject{
     
    @objc let gcmMessageIDKey = "gcm.message_id"
@@ -58,7 +58,7 @@ extension XTPushSDKInitFcm : MessagingDelegate {
         }
      }
 }
-  //MARK: -- 代理获取token值
+  //MARK: -- 代理获取消息内容
 @available(iOS 10, *)
 extension XTPushSDKInitFcm: UNUserNotificationCenterDelegate {
 
@@ -88,11 +88,21 @@ extension XTPushSDKInitFcm: UNUserNotificationCenterDelegate {
                                 willPresent notification: UNNotification,
       withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
       let userInfo = notification.request.content.userInfo
-
       if let messageID = userInfo[gcmMessageIDKey] {
         print("-----XTTPushSDK-----\n MessageID(2): \(messageID)")
       }
-      print(userInfo)
+       let userInfoBody = notification.request.content.body
+       let userInfoTitle = notification.request.content.title
+       var userOtherMsg = ""
+       if let aps = userInfo["aps"] as? NSDictionary {
+          if let msg = aps["msg"] as? NSString {
+             userOtherMsg = msg as String
+          }
+       }
+       print("-----XTTPushSDK-----\n userInfoTitle:\(userInfoTitle) userInfoBody:\(userInfoBody) userOtherMsg:\(userOtherMsg)")
+       if XTPushMSG.XTPush.delegate != nil && (XTPushMSG.XTPush.delegate?.responds(to: #selector(XTPushSDKDelegate.xtNotifMSGInApp(title:body:otherMsg:))))!{
+             XTPushMSG.XTPush.delegate?.xtNotifMSGInApp?(title: userInfoTitle, body: userInfoBody, otherMsg: userOtherMsg)
+         }
       completionHandler([])
     }
     

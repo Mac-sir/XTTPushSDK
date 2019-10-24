@@ -28,7 +28,7 @@ public let XTPushSDKHelperShared = XTPushSDKHelper()
         if error != nil {
             print("Unable Subscribed to \(Topic) topic")
          }else{
-            print("1Subscribed to \(Topic) topic")
+            print("Subscribed to \(Topic) topic")
             self.pushDefaultTopic(tp: Topic)
           }
               
@@ -54,7 +54,8 @@ public let XTPushSDKHelperShared = XTPushSDKHelper()
         if let topic = pushTopic.string(forKey: appSubTopic){
             Messaging.messaging().unsubscribe(fromTopic: topic) { (error) in
                 if error != nil {
-                   result = "Cancel-Success"
+                   result = "Cancel_Success"
+                   self.pushTopic.removeObject(forKey: appSubTopic)
                 }else{
                    result = "Cancel_Faile"
                 }

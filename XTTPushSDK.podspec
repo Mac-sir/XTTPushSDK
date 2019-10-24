@@ -32,13 +32,13 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'XTTPushSDK/Classes/**/*'
   
-  s.swift_versions = "4.0"
+  s.swift_versions = "5.0"
   # s.resource_bundles = {
   #   'XTTPushSDK' => ['XTTPushSDK/Assets/*.png']
   # }
   s.static_framework = true
   # s.public_header_files = 'XTTPushSDK/Classes/**/*'
-  s.frameworks = 'UIKit'
-  s.dependency 'MJRefresh'
+  # s.frameworks = 'UIKit'
+  # s.dependency 'MJRefresh'
   s.dependency 'Firebase/Messaging'
 end
