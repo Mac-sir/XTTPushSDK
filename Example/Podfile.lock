@@ -56,7 +56,7 @@ PODS:
   - nanopb/decode (0.3.904)
   - nanopb/encode (0.3.904)
   - Protobuf (3.10.0)
-  - XTTPushSDK (0.0.1):
+  - XTTPushSDK (1.0.1):
     - Firebase/Messaging
 
 DEPENDENCIES:
@@ -94,7 +94,7 @@ SPEC CHECKSUMS:
   GoogleUtilities: f895fde57977df4e0233edda0dbeac490e3703b6
   nanopb: 06f6030d554e6473f5e172460173fcf80f5548f4
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
-  XTTPushSDK: be4d4bfaa2576b6b1ebdb5189047195146e67347
+  XTTPushSDK: 605b3442f26069c5fe7bd0739b8a0223eb65048e
 
 PODFILE CHECKSUM: 11c0b729594d467d29bf4fa3371ecd79bf54f010
 
