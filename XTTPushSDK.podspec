@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XTTPushSDK'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'A short description of XTTPushSDK.'
 
 # This description is used to generate tags and improve search results.
@@ -21,22 +21,24 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/Mac_air/XTTPushSDK'
+  s.homepage         = 'https://github.com/Mac-sir/XTTPushSDK'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Mac_air' => '1018472834@qq.com' }
-  s.source           = { :git => 'https://github.com/Mac_air/XTTPushSDK.git', :tag => s.version.to_s }
+  s.author           = { 'Mac-sir' => '1018472834@qq.com' }
+  s.source           = { :git => 'https://github.com/Mac-sir/XTTPushSDK.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'XTTPushSDK/Classes/**/*'
   
+  s.swift_versions = "4.0"
   # s.resource_bundles = {
   #   'XTTPushSDK' => ['XTTPushSDK/Assets/*.png']
   # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.static_framework = true
+  # s.public_header_files = 'XTTPushSDK/Classes/**/*'
+  s.frameworks = 'UIKit'
+  s.dependency 'MJRefresh'
+  s.dependency 'Firebase/Messaging'
 end

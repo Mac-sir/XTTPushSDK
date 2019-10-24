@@ -1,0 +1,6 @@
+framework module XTTPushSDK {
+  umbrella header "XTTPushSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}
