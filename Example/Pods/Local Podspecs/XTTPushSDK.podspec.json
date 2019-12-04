@@ -1,6 +1,6 @@
 {
   "name": "XTTPushSDK",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "summary": "A short description of XTTPushSDK.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/Mac-sir/XTTPushSDK",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/Mac-sir/XTTPushSDK.git",
-    "tag": "1.0.1"
+    "tag": "1.0.5"
   },
   "platforms": {
     "ios": "10.0"
@@ -21,15 +21,8 @@
   "source_files": "XTTPushSDK/Classes/**/*",
   "swift_versions": "5.0",
   "static_framework": true,
-  "vendored_frameworks": "frameworks/XTTPushSDK.framework",
   "dependencies": {
     "Firebase/Messaging": [
-
-    ],
-    "MQTTClient": [
-
-    ],
-    "Alamofire": [
 
     ]
   },

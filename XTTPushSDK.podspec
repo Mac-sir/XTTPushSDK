@@ -42,6 +42,6 @@ TODO: Add long description of the pod here.
   # s.dependency 'MJRefresh'
   # s.vendored_frameworks = "frameworks/XTTPushSDK.framework"
   s.dependency 'Firebase/Messaging'
-  s.dependency 'MQTTClient'
-  s.dependency 'Alamofire'
+  #s.dependency 'MQTTClient'
+  #s.dependency 'Alamofire'
 end
