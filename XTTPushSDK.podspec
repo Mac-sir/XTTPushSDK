@@ -40,5 +40,8 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'XTTPushSDK/Classes/**/*'
   # s.frameworks = 'UIKit'
   # s.dependency 'MJRefresh'
+  s.vendored_frameworks = "frameworks/XTTPushSDK.framework"
   s.dependency 'Firebase/Messaging'
+  s.dependency 'MQTTClient'
+  s.dependency 'Alamofire'
 end

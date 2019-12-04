@@ -22,9 +22,9 @@ import Foundation
     weak open var delegate: XTPushSDKDelegate?
     
     public class var XTPush :XTPushMSG {
-    struct Static {
-        static let initfcm = XTPushMSG()
+        struct Static {
+            static let initfcm = XTPushMSG()
+        }
+        return Static.initfcm
     }
-    return Static.initfcm
-   }
 }

@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.9.0)
   - Firebase/CoreOnly (6.11.0):
     - FirebaseCore (= 6.3.2)
   - Firebase/Messaging (6.11.0):
@@ -50,6 +51,14 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (6.3.1):
     - GoogleUtilities/Logger
+  - MQTTClient (0.15.2):
+    - MQTTClient/Core (= 0.15.2)
+  - MQTTClient/Core (0.15.2):
+    - MQTTClient/Manager
+    - MQTTClient/Min
+  - MQTTClient/Manager (0.15.2):
+    - MQTTClient/Min
+  - MQTTClient/Min (0.15.2)
   - nanopb (0.3.904):
     - nanopb/decode (= 0.3.904)
     - nanopb/encode (= 0.3.904)
@@ -57,13 +66,16 @@ PODS:
   - nanopb/encode (0.3.904)
   - Protobuf (3.10.0)
   - XTTPushSDK (1.0.1):
+    - Alamofire
     - Firebase/Messaging
+    - MQTTClient
 
 DEPENDENCIES:
   - XTTPushSDK (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - Firebase
     - FirebaseAnalyticsInterop
     - FirebaseCore
@@ -74,6 +86,7 @@ SPEC REPOS:
     - GoogleDataTransport
     - GoogleDataTransportCCTSupport
     - GoogleUtilities
+    - MQTTClient
     - nanopb
     - Protobuf
 
@@ -82,6 +95,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
   Firebase: bc9cfc7a96c73268656d5aaab453ff1b4b530e0e
   FirebaseAnalyticsInterop: d48b6ab67bcf016a05e55b71fc39c61c0cb6b7f3
   FirebaseCore: beeff42c07c30ea94702471d99db2089b594fbbd
@@ -92,9 +106,10 @@ SPEC CHECKSUMS:
   GoogleDataTransport: 166f9b9f82cbf60a204e8fe2daa9db3e3ec1fb15
   GoogleDataTransportCCTSupport: f6ab1962e9dc05ab1fb938b795e5b310209edeec
   GoogleUtilities: f895fde57977df4e0233edda0dbeac490e3703b6
+  MQTTClient: 902c7bcac1501595f3d0b15178c7205b40331fb0
   nanopb: 06f6030d554e6473f5e172460173fcf80f5548f4
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
-  XTTPushSDK: 605b3442f26069c5fe7bd0739b8a0223eb65048e
+  XTTPushSDK: 21b2a11e8fc94f5e0ac43d89383f94020803250b
 
 PODFILE CHECKSUM: 11c0b729594d467d29bf4fa3371ecd79bf54f010
 

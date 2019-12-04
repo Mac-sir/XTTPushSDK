@@ -21,8 +21,15 @@
   "source_files": "XTTPushSDK/Classes/**/*",
   "swift_versions": "5.0",
   "static_framework": true,
+  "vendored_frameworks": "frameworks/XTTPushSDK.framework",
   "dependencies": {
     "Firebase/Messaging": [
+
+    ],
+    "MQTTClient": [
+
+    ],
+    "Alamofire": [
 
     ]
   },
