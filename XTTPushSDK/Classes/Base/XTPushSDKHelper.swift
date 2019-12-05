@@ -32,6 +32,7 @@ public let XTPushSDKHelperShared = XTPushSDKHelper()
             }else{
                 print("Subscribed to \(Topic) topic")
                 self.pushDefaultTopic(tp: Topic)
+        
             }
             
         }
@@ -40,10 +41,12 @@ public let XTPushSDKHelperShared = XTPushSDKHelper()
     
     //MARK: --存储订阅主题集合
     @objc  public  func pushDefaultTopic(tp:String){
-        print("订阅主题：\(tp)")
+        
         // pushTopic.set(tp, forKey: appSubTopic)
         if !ptopic.contains(tp){
             ptopic.append(tp)
+            print("subTopic：\(tp)")
+            print(self.ptopic)
         }
     }
     
@@ -56,11 +59,22 @@ public let XTPushSDKHelperShared = XTPushSDKHelper()
     //MARK: --取消订阅主题/清空集合
     @objc public func cancelSubFromTopic(){
         for i in ptopic {
-            Messaging.messaging().unsubscribe(fromTopic: i)
+            Messaging.messaging().unsubscribe(fromTopic: i) { (error) in
+                if error != nil {
+                    print("-------remove fail \(i) , continue!--------")
+                    Messaging.messaging().unsubscribe(fromTopic: i)
+                }else{
+                    print("--------remove \(i)!---------")
+                }
+            }
             if i == ptopic[ptopic.count - 1] {
                 ptopic.removeAll()
+                print("----------\(i) remove sucess!---------")
+            }else{
+                print("---------remove\(i)!-----------")
             }
         }
+        
     }
     
 }

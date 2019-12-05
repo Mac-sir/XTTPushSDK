@@ -50,13 +50,15 @@ extension XTPushSDKInitFcm : MessagingDelegate {
     public func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
         let dataDict:[String: String] = ["token": fcmToken]
         if let FCMTOKEN = dataDict["token"] {
-            print("fcmtoken:\(FCMTOKEN)")
+print("--------------------------------------------------------------------------------------------------------------------\n")
+print("fcmtoken:\(FCMTOKEN)                                                             \n")
+print("--------------------------------------------------------------------------------------------------------------------\n")
             if XTPushMSG.XTPush.delegate != nil && XTPushMSG.XTPush.delegate!.responds(to: #selector(XTPushSDKDelegate.xtToken(FCMToken:))){
-                print("执行")
                 XTPushMSG.XTPush.delegate?.xtToken?(FCMToken: FCMTOKEN)//回传token
             }
         }
     }
+    
 }
 //MARK: -- 代理获取消息内容
 @available(iOS 10, *)
